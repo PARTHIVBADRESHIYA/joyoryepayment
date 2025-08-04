@@ -6,6 +6,9 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import Privacy from './components/Privacy';
+import Terms from './components/terms';
+import RefundPolicy from './components/refund-policy';
+
 import Categories from './components/Categories';
 import loadRazorpayScript from './utils/loadRazorpayScript'; // ✅ import this at top
 import ScrollToTop from './components/ScrollToTop';
@@ -166,6 +169,8 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/refund-policy" element={<RefundPolicy />} />
             <Route path="/categories" element={<Categories cartContext={cartContext} />} />
           </Routes>
         </main>

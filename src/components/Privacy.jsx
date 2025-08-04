@@ -104,7 +104,7 @@ export default function Privacy() {
     ];
 
     const Modal = ({ title, body, onClose }) => (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 overflow-y-auto">
             <div className="bg-white rounded-xl p-8 max-w-2xl shadow-xl">
                 <h2 className="text-2xl font-bold mb-4">{title}</h2>
                 <p className="text-gray-700 whitespace-pre-line mb-6">{body}</p>
@@ -175,7 +175,7 @@ export default function Privacy() {
                             Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.
                         </p>
                         <p className="text-gray-700">
-                            If you are a parent or guardian and believe your child has provided us with personal information, please contact us at privacy@joyory.in. We will take prompt action to delete such data.
+                            If you are a parent or guardian and believe your child has provided us with personal information, please contact us at joyory2025@gmail.com . We will take prompt action to delete such data.
                         </p>
                     </div>
 

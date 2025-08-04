@@ -14,50 +14,29 @@ export default function Footer() {
         {
             title: 'Shop',
             links: [
-                { name: 'Makeup', href: '/categories' },
-                { name: 'Skincare', href: '/categories' },
-                { name: 'Hair Care', href: '/categories' },
-                { name: 'Fragrances', href: '/categories' },
-                { name: 'Tools & Brushes', href: '/categories' },
-                { name: 'New Arrivals', href: '/categories' },
-                { name: 'Best Sellers', href: '/categories' },
-                { name: 'Sale', href: '/categories' }
+                { name: 'Makeup', href: '/categories#makeup' },
+                { name: 'Skincare', href: '/categories#skincare' },
+                { name: 'Hair Care', href: '/categories#haircare' },
+                { name: 'Fragrances', href: '/categories#fragrances' }
             ]
         },
         {
             title: 'Customer Service',
             links: [
                 { name: 'Contact Us', href: '/contact' },
-                { name: 'Track Order', href: '/contact' }, // use contact if no tracking page yet
-                { name: 'Returns & Exchanges', href: '/privacy-policy#refund-policy' },
-                { name: 'Shipping Info', href: '/privacy-policy#refund-policy' },
-                { name: 'Size Guide', href: '/categories' },
-                { name: 'Beauty Tips', href: '/categories' },
-                { name: 'Gift Cards', href: '/categories' },
-                { name: 'Help Center', href: '/contact' }
+                { name: 'Returns & Exchanges', href: '/refund-policy' },
+                { name: 'Shipping Info', href: '/refund-policy' }
             ]
         },
         {
             title: 'About Joyory',
             links: [
                 { name: 'Our Story', href: '/about' },
-                { name: 'Careers', href: '/about' },
-                { name: 'Press', href: '/about' },
-                { name: 'Sustainability', href: '/about' },
                 { name: 'Privacy Policy', href: '/privacy-policy' },
-                { name: 'Terms of Service', href: '/privacy-policy#terms-of-service' },
+                { name: 'Terms of Service', href: '/terms' },
                 { name: 'Cookie Policy', href: '/privacy-policy#cookie-policy' },
-                { name: 'Accessibility', href: '/privacy-policy' }
             ]
         }
-    ];
-
-    const socialLinks = [
-        { name: 'Instagram', icon: '📷', href: '#' },
-        { name: 'Facebook', icon: '📘', href: '#' },
-        { name: 'Twitter', icon: '🐦', href: '#' },
-        { name: 'YouTube', icon: '📺', href: '#' },
-        { name: 'Pinterest', icon: '📌', href: '#' }
     ];
 
     const paymentMethods = ['💳', '🏦', '📱', '💻', '📧', '🏪'];
@@ -103,18 +82,6 @@ export default function Footer() {
 
                         <div>
                             <h4 className="text-lg font-semibold mb-3">Follow Us</h4>
-                            <div className="flex space-x-4">
-                                {socialLinks.map((social, index) => (
-                                    <a
-                                        key={index}
-                                        href={social.href}
-                                        className="text-2xl hover:text-pink-400 transition-colors"
-                                        title={social.name}
-                                    >
-                                        {social.icon}
-                                    </a>
-                                ))}
-                            </div>
                         </div>
                     </div>
 
@@ -125,12 +92,12 @@ export default function Footer() {
                                 {section.links.map((link, linkIndex) => (
                                     <li key={linkIndex}>
                                         {link.href.startsWith('/') ? (
-                                            <Link
-                                                to={link.href}
+                                            <a
+                                                href={link.href}
                                                 className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
                                             >
                                                 {link.name}
-                                            </Link>
+                                            </a>
                                         ) : (
                                             <a
                                                 href={link.href}
@@ -165,7 +132,7 @@ export default function Footer() {
                             <Link to="/privacy-policy" className="text-gray-400 hover:text-pink-400 transition-colors">
                                 Privacy Policy
                             </Link>
-                            <Link to="/privacy-policy#terms-of-service" className="text-gray-400 hover:text-pink-400 transition-colors">
+                            <Link to="/terms" className="text-gray-400 hover:text-pink-400 transition-colors">
                                 Terms of Service
                             </Link>
                             <Link to="/privacy-policy#cookie-policy" className="text-gray-400 hover:text-pink-400 transition-colors">

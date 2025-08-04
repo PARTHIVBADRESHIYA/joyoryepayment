@@ -60,7 +60,7 @@ export default function Categories({ cartContext }) {
                     price: 1299,
                     originalPrice: 1599,
                     description: '18 highly pigmented shades for endless eye looks.',
-                    img: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&h=400&fit=crop',
+                    img: 'https://images-static.nykaa.com/media/catalog/product/f/8/f897e18KAYBE00000721_9.jpg?tr=w-500',
                     rating: 4.9,
                     reviews: 1023,
                     inStock: true,
@@ -95,7 +95,7 @@ export default function Categories({ cartContext }) {
                     price: 649,
                     originalPrice: 899,
                     description: 'Deeply hydrating moisturizer with hyaluronic acid.',
-                    img: 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop',
+                    img: 'https://images-static.nykaa.com/media/catalog/product/d/9/d9720acDRSHE00000058_1a.jpg?tr=w-500',
                     rating: 4.6,
                     reviews: 1567,
                     inStock: true,
@@ -121,7 +121,7 @@ export default function Categories({ cartContext }) {
                     price: 449,
                     originalPrice: 599,
                     description: 'Broad spectrum protection with lightweight formula.',
-                    img: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop',
+                    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA0Rwp6gG47XuHGq1P7NC19e1Q5XFtW7opCA&s',
                     rating: 4.8,
                     reviews: 2341,
                     inStock: true,
@@ -143,7 +143,7 @@ export default function Categories({ cartContext }) {
                     price: 599,
                     originalPrice: 799,
                     description: 'Nourishing hair serum for smooth and shiny hair.',
-                    img: 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop',
+                    img: 'https://lordscares.com/cdn/shop/files/ArganHairSerum.jpg?v=1712142158&width=800',
                     rating: 4.7,
                     reviews: 1234,
                     inStock: true,
@@ -156,7 +156,7 @@ export default function Categories({ cartContext }) {
                     price: 899,
                     originalPrice: 1199,
                     description: 'Deep conditioning mask for damaged hair repair.',
-                    img: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&h=400&fit=crop',
+                    img: 'https://m.media-amazon.com/images/I/51+Td55XX7L.jpg',
                     rating: 4.8,
                     reviews: 987,
                     inStock: true,
@@ -169,7 +169,7 @@ export default function Categories({ cartContext }) {
                     price: 349,
                     originalPrice: 449,
                     description: 'Protect your hair from heat styling damage.',
-                    img: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop',
+                    img: 'https://m.media-amazon.com/images/I/41ZRZg9wfJL.jpg',
                     rating: 4.6,
                     reviews: 756,
                     inStock: true,
@@ -182,7 +182,7 @@ export default function Categories({ cartContext }) {
                     price: 299,
                     originalPrice: 399,
                     description: 'Gentle detangling brush for all hair types.',
-                    img: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop',
+                    img: '	https://images.meesho.com/images/products/554541030/pjffy_1200.jpg?width=512',
                     rating: 4.5,
                     reviews: 432,
                     inStock: true,
@@ -217,7 +217,7 @@ export default function Categories({ cartContext }) {
                     price: 399,
                     originalPrice: 549,
                     description: 'Refreshing body mist with marine notes.',
-                    img: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&h=400&fit=crop',
+                    img: 'https://aqualogica.in/cdn/shop/files/shoot_a938da08-e236-4451-94c3-cf8652f0cf2e.jpg?v=1726640760',
                     rating: 4.4,
                     reviews: 678,
                     inStock: true,
@@ -230,7 +230,7 @@ export default function Categories({ cartContext }) {
                     price: 599,
                     originalPrice: 799,
                     description: 'Soy wax candle with warm vanilla fragrance.',
-                    img: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop',
+                    img: 'https://m.media-amazon.com/images/I/61ytAXoRvGL.jpg',
                     rating: 4.7,
                     reviews: 445,
                     inStock: true,
@@ -243,7 +243,7 @@ export default function Categories({ cartContext }) {
                     price: 299,
                     originalPrice: 399,
                     description: 'Calming lavender spray for peaceful sleep.',
-                    img: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop',
+                    img: 'https://bsoul.in/cdn/shop/files/Serenelavender04.jpg?v=1741408618&width={width}',
                     rating: 4.6,
                     reviews: 567,
                     inStock: true,
@@ -278,7 +278,7 @@ export default function Categories({ cartContext }) {
                     price: 2499,
                     originalPrice: 2999,
                     description: '10x magnification mirror with adjustable lighting.',
-                    img: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop',
+                    img: 'https://femallura.com/image/cache/catalog/femimg/b0bbpq5ydm_l1-800x800.webp',
                     rating: 4.9,
                     reviews: 456,
                     inStock: true,
@@ -291,7 +291,7 @@ export default function Categories({ cartContext }) {
                     price: 199,
                     originalPrice: 299,
                     description: 'Soft, blendable sponge for seamless foundation application.',
-                    img: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&h=400&fit=crop',
+                    img: 'https://www.reneecosmetics.in/cdn/shop/files/RENE_Superblender_ListingPI_01.jpg?v=1742484944',
                     rating: 4.7,
                     reviews: 1234,
                     inStock: true,
@@ -304,7 +304,7 @@ export default function Categories({ cartContext }) {
                     price: 149,
                     originalPrice: 199,
                     description: 'Professional eyelash curler for dramatic lashes.',
-                    img: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=400&fit=crop',
+                    img: 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQWWcQ1BrdwfwaeR8DgGibOfuWBgDpGc7y2LQALmEB3Pat73EOzkzRScZnb-75XhLJZ3CQec4VfNnm_0BWLoN3_JOrslXyGhE13lxzLlZQ&usqp=CAc',
                     rating: 4.5,
                     reviews: 789,
                     inStock: true,
@@ -314,6 +314,10 @@ export default function Categories({ cartContext }) {
             ]
         }
     ];
+
+
+
+
     useEffect(() => {
         const hash = location.hash.replace('#', '');
         const categoryExists = categories.find(cat => cat.id === hash);
@@ -324,6 +328,7 @@ export default function Categories({ cartContext }) {
             }, 100);
         }
     }, [location.hash]);
+
 
     const addToCart = (product) => cartContext.addToCart(product);
 

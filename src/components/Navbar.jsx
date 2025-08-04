@@ -30,7 +30,6 @@ export default function Navbar({ cart, toggleCartPanel }) {
                         <Link to="/categories" className="text-gray-700 hover:text-pink-500 font-medium">Categories</Link>
                         <Link to="/about" className="text-gray-700 hover:text-pink-500 font-medium">About</Link>
                         <Link to="/contact" className="text-gray-700 hover:text-pink-500 font-medium">Contact</Link>
-                        <Link to="/privacy-policy" className="text-gray-700 hover:text-pink-500 font-medium">Privacy</Link>
                     </nav>
 
                     {/* Search Bar */}

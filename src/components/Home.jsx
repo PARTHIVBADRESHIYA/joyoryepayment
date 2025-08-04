@@ -180,7 +180,7 @@ export default function Home({ cartContext }) {
                                 </p>
                             </div>
                         </div>
-           
+
                     </div>
                 </div>
             </section>

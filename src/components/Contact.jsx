@@ -90,7 +90,7 @@ export default function Contact() {
         },
         {
             question: 'How can I become a seller on Joyory?',
-            answer: 'We\'re always looking for quality beauty brands to partner with. Please email us at partnerships@joyory.in with your brand details.'
+            answer: 'We\'re always looking for quality beauty brands to partner with. Please email us at joyory2025@gmail.com  with your brand details.'
         }
     ];
 
