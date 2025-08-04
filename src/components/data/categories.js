@@ -1,10 +1,11 @@
-   const categories = [
+const categories = [
         {
             id: 'makeup',
             name: 'Makeup',
             icon: '💄',
             description: 'Discover the perfect makeup products for every occasion',
             color: 'bg-pink-100',
+            slug: 'makeup',
             products: [
                 {
                     id: 1,
@@ -66,6 +67,7 @@
             icon: '🧴',
             description: 'Nurture your skin with our premium skincare collection',
             color: 'bg-blue-100',
+            slug: 'skincare',
             products: [
                 {
                     id: 5,
@@ -127,6 +129,7 @@
             icon: '💇‍♀️',
             description: 'Transform your hair with professional hair care products',
             color: 'bg-purple-100',
+            slug: 'haircare',
             products: [
                 {
                     id: 9,
@@ -188,6 +191,7 @@
             icon: '🌸',
             description: 'Discover your signature scent with our luxury fragrances',
             color: 'bg-yellow-100',
+            slug: 'fragrances',
             products: [
                 {
                     id: 13,
@@ -249,6 +253,7 @@
             icon: '🖌️',
             description: 'Professional beauty tools for flawless application',
             color: 'bg-green-100',
+            slug: 'tools',
             products: [
                 {
                     id: 17,
@@ -305,3 +310,5 @@
             ]
         }
     ];
+
+    export default categories

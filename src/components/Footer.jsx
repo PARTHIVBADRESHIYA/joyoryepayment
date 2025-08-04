@@ -14,12 +14,13 @@ export default function Footer() {
         {
             title: 'Shop',
             links: [
-                { name: 'Makeup', href: '/categories#makeup' },
-                { name: 'Skincare', href: '/categories#skincare' },
-                { name: 'Hair Care', href: '/categories#haircare' },
-                { name: 'Fragrances', href: '/categories#fragrances' }
+                { name: 'Makeup', href: '/categories/makeup' },
+                { name: 'Skincare', href: '/categories/skincare' },
+                { name: 'Hair Care', href: '/categories/haircare' },
+                { name: 'Fragrances', href: '/categories/fragrances' }
             ]
-        },
+        }
+        ,
         {
             title: 'Customer Service',
             links: [
@@ -34,7 +35,7 @@ export default function Footer() {
                 { name: 'Our Story', href: '/about' },
                 { name: 'Privacy Policy', href: '/privacy-policy' },
                 { name: 'Terms of Service', href: '/terms' },
-                { name: 'Cookie Policy', href: '/privacy-policy#cookie-policy' },
+                { name: 'Cookie Policy', href: '/cookies-policy' },
             ]
         }
     ];
@@ -135,7 +136,7 @@ export default function Footer() {
                             <Link to="/terms" className="text-gray-400 hover:text-pink-400 transition-colors">
                                 Terms of Service
                             </Link>
-                            <Link to="/privacy-policy#cookie-policy" className="text-gray-400 hover:text-pink-400 transition-colors">
+                            <Link to="/cookies-policy" className="text-gray-400 hover:text-pink-400 transition-colors">
                                 Cookie Policy
                             </Link>
                         </div>

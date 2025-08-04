@@ -1,10 +1,39 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import categories from './data/categories.js';
 
 export default function Navbar({ cart, toggleCartPanel }) {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
+    const navigate = useNavigate();
+
+    const handleSearch = () => {
+        const query = searchQuery.trim().toLowerCase();
+
+        // Match category by name
+        const matchedCategory = categories.find(
+            cat => cat.name.toLowerCase().includes(query)
+        );
+        if (matchedCategory) {
+            navigate(`/categories/${matchedCategory.slug}`);
+            return;
+        }
+
+        // Match product by name inside categories
+        for (const category of categories) {
+            const matchedProduct = category.products?.find(prod =>
+                prod.name.toLowerCase().includes(query)
+            );
+            if (matchedProduct) {
+                // Navigate to category where product lives
+                navigate(`/categories/${category.slug}`);
+                return;
+            }
+        }
+
+        alert("No matching category or product found.");
+    };
 
     return (
         <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -13,7 +42,7 @@ export default function Navbar({ cart, toggleCartPanel }) {
                 <p>✨ Free Shipping on Orders Above ₹999 | 20% Off on First Order ✨</p>
             </div>
 
-            {/* Main Navigation */}
+            {/* Main Nav */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-4">
                     {/* Logo */}
@@ -40,9 +69,13 @@ export default function Navbar({ cart, toggleCartPanel }) {
                                 placeholder="Search beauty products..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
+                                onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
                                 className="w-64 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-pink-500"
                             />
-                            <button className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-pink-500">🔍</button>
+                            <button
+                                onClick={handleSearch}
+                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-pink-500"
+                            >🔍</button>
                         </div>
                     </div>
 
@@ -62,35 +95,12 @@ export default function Navbar({ cart, toggleCartPanel }) {
                             )}
                         </button>
 
-                        {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="md:hidden p-2 text-gray-700 hover:text-pink-500"
-                        >
-                            ☰
-                        </button>
+                        >☰</button>
                     </div>
                 </div>
-
-                {/* Mobile Menu */}
-                {isMenuOpen && (
-                    <div className="md:hidden bg-white border-t border-gray-200 py-4">
-                        <div className="space-y-4 px-4">
-                            <Link to="/" onClick={() => setIsMenuOpen(false)} className="block text-gray-700 hover:text-pink-500">Home</Link>
-                            <Link to="/categories" onClick={() => setIsMenuOpen(false)} className="block text-gray-700 hover:text-pink-500">Categories</Link>
-                            <Link to="/about" onClick={() => setIsMenuOpen(false)} className="block text-gray-700 hover:text-pink-500">About</Link>
-                            <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="block text-gray-700 hover:text-pink-500">Contact</Link>
-                            <Link to="/privacy-policy" onClick={() => setIsMenuOpen(false)} className="block text-gray-700 hover:text-pink-500">Privacy</Link>
-                            <div className="pt-4 border-t border-gray-200">
-                                <input
-                                    type="text"
-                                    placeholder="Search beauty products..."
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-pink-500"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                )}
             </div>
         </header>
     );

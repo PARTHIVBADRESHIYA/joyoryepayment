@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import bgImg from "../assets/bg_img.jpeg"; // Adjust path if needed
+import { Link } from "react-router-dom";
+
+
 
 const products = [
     {
@@ -50,7 +54,7 @@ const products = [
         price: 649,
         originalPrice: 899,
         description: 'Deeply hydrating moisturizer with hyaluronic acid. Provides 24-hour hydration.',
-        img: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop',
+        img: 'https://images-static.nykaa.com/media/catalog/product/d/9/d9720acDRSHE00000058_1a.jpg?tr=w-500',
         category: 'Skincare',
         rating: 4.6,
         reviews: 1567,
@@ -60,17 +64,16 @@ const products = [
     },
     {
         id: 5,
-        name: 'Professional Makeup Brush Set',
-        price: 1299,
-        originalPrice: 1899,
-        description: 'Complete set of 12 professional brushes for flawless makeup application.',
-        img: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop',
-        category: 'Tools & Brushes',
-        rating: 4.8,
-        reviews: 743,
+        name: 'LED Makeup Mirror',
+        price: 2499,
+        originalPrice: 2999,
+        description: '10x magnification mirror with adjustable lighting. Perfect for precise makeup applications.',
+        img: 'https://femallura.com/image/cache/catalog/femimg/b0bbpq5ydm_l1-800x800.webp?w=400&h=400&fit=crop',
+        rating: 4.9,
+        reviews: 456,
         inStock: true,
-        isNew: true,
-        discount: 32
+        isNew: false,
+        discount: 17
     },
     {
         id: 6,
@@ -89,32 +92,11 @@ const products = [
 ];
 
 const categories = [
-    { name: 'Makeup', icon: '💄', count: 156, color: 'bg-pink-100' },
-    { name: 'Skincare', icon: '🧴', count: 89, color: 'bg-blue-100' },
-    { name: 'Hair Care', icon: '💇‍♀️', count: 67, color: 'bg-purple-100' },
-    { name: 'Fragrances', icon: '🌸', count: 34, color: 'bg-yellow-100' },
-    { name: 'Tools & Brushes', icon: '🖌️', count: 45, color: 'bg-green-100' }
-];
-
-const testimonials = [
-    {
-        name: 'Priya Sharma',
-        rating: 5,
-        comment: 'Amazing quality products! The lipstick stays on for hours and the customer service is excellent.',
-        avatar: '👩‍🦰'
-    },
-    {
-        name: 'Anjali Patel',
-        rating: 5,
-        comment: 'Best beauty website I\'ve found. Fast delivery and authentic products. Highly recommended!',
-        avatar: '👩‍🦱'
-    },
-    {
-        name: 'Meera Reddy',
-        rating: 5,
-        comment: 'Love their skincare range. My skin has never looked better. Thank you Joyory!',
-        avatar: '👩‍🦳'
-    }
+    { name: 'Makeup', icon: '💄', count: 4, color: 'bg-pink-100', slug: 'makeup' },
+    { name: 'Skincare', icon: '🧴', count: 4, color: 'bg-blue-100', slug: 'skincare' },
+    { name: 'Hair Care', icon: '💇‍♀️', count: 4, color: 'bg-purple-100',slug:"haircare"},
+    { name: 'Fragrances', icon: '🌸', count: 4, color: 'bg-yellow-100', slug: 'fragrances' },
+    { name: 'Tools & Brushes', icon: '🖌️', count: 4, color: 'bg-green-100', slug: 'tools' }
 ];
 
 export default function Home({ cartContext }) {
@@ -136,29 +118,30 @@ export default function Home({ cartContext }) {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-r from-pink-400 via-purple-500 to-pink-600 text-white py-16 md:py-20">
+            <section className="relative bg-[#ffe7ef] text-[#333] py-16 md:py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
                         {/* Left Content */}
                         <div className="text-center md:text-left">
                             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                                 Discover Your
-                                <span className="block text-pink-200">Natural Beauty</span>
+                                <span className="block text-pink-600">Natural Beauty</span>
                             </h1>
-                            <p className="text-lg sm:text-xl text-pink-100 mb-8 max-w-xl">
+                            <p className="text-lg sm:text-xl text-[#5e5e5e] mb-8 max-w-xl mx-auto md:mx-0">
                                 Premium cosmetics and skincare products that enhance your natural beauty.
                                 Shop authentic brands with free shipping on orders above ₹999.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                                 <button
                                     onClick={() => navigate('/categories')}
-                                    className="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-pink-50 transition"
+                                    className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full font-semibold transition"
                                 >
                                     Shop Now
                                 </button>
                                 <button
                                     onClick={() => navigate('/categories')}
-                                    className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-pink-600 transition"
+                                    className="border-2 border-pink-600 text-pink-600 hover:bg-pink-50 px-8 py-3 rounded-full font-semibold transition"
                                 >
                                     View Categories
                                 </button>
@@ -166,41 +149,49 @@ export default function Home({ cartContext }) {
                         </div>
 
                         {/* Right Image */}
-                        <div className="w-full aspect-[4/3] relative overflow-hidden rounded-xl shadow-xl">
+                        <div className="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-xl">
+                            {/* Background Image */}
                             <img
-                                src="https://images.unsplash.com/photo-1581093588401-10c8d5c5e7d8?auto=format&fit=crop&w=1200&q=80"
+                                src={bgImg}
                                 alt="Joyory Beauty Collection"
-                                className="absolute inset-0 w-full h-full object-cover"
+                                className="w-full h-full object-cover object-center"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-pink-500/50 to-purple-500/50 backdrop-blur-sm" />
-                            <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
-                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Welcome to Joyory Beauty</h2>
-                                <p className="text-sm sm:text-base max-w-md">
+
+                            {/* Overlay to improve text contrast */}
+                            <div className="absolute inset-0 bg-black/30 rounded-xl z-0" />
+
+                            {/* Text Block */}
+                            <div className="absolute inset-0 flex flex-col items-start justify-center text-white text-left px-6 md:px-12 z-10">
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 drop-shadow-md">
+                                    Welcome to Joyory Beauty
+                                </h2>
+                                <p className="text-sm sm:text-base max-w-md drop-shadow-sm">
                                     Unveil your natural glow with the finest cosmetics, skincare, and fragrances.
                                 </p>
                             </div>
                         </div>
 
+
                     </div>
                 </div>
             </section>
-
-
-
+sea
             {/* Categories Section */}
             <section className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-bold text-center mb-12">Shop by Category</h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                         {categories.map((category, index) => (
-                            <div
+                            <Link
+                                to={`/categories/${category.slug}`} // dynamic route
                                 key={index}
                                 className={`${category.color} p-6 rounded-lg text-center cursor-pointer hover:scale-105 transition-transform`}
                             >
+
                                 <div className="text-4xl mb-3">{category.icon}</div>
                                 <h3 className="font-semibold text-gray-800">{category.name}</h3>
                                 <p className="text-sm text-gray-600">{category.count} products</p>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -292,26 +283,6 @@ export default function Home({ cartContext }) {
                 </div>
             </section>
 
-            {/* Testimonials */}
-            <section className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {testimonials.map((testimonial, index) => (
-                            <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                                <div className="flex items-center mb-4">
-                                    <div className="text-3xl mr-3">{testimonial.avatar}</div>
-                                    <div>
-                                        <h4 className="font-semibold">{testimonial.name}</h4>
-                                        <div className="text-yellow-400 text-sm">{renderStars(testimonial.rating)}</div>
-                                    </div>
-                                </div>
-                                <p className="text-gray-600 italic">"{testimonial.comment}"</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* Features */}
             <section className="py-16 bg-gradient-to-r from-pink-50 to-purple-50">

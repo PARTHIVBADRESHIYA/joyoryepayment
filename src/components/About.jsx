@@ -4,7 +4,7 @@ export default function About() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50">
             {/* Hero Section */}
-            <section className="py-20 bg-gradient-to-r from-pink-400 via-purple-500 to-pink-600 text-white">
+            <section className="py-20 bg-[#ffe7ef] text-[#333]">
                 <div className="max-w-5xl mx-auto px-4 text-center">
                     <h1 className="text-4xl md:text-6xl font-bold mb-6">About Joyory Beauty</h1>
                     <p className="text-xl md:text-2xl text-pink-100 max-w-3xl mx-auto">
